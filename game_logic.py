@@ -16,7 +16,7 @@ def display_game_state(mistakes, secret_word, guessed_letters):
     Displays the current snowman stage and the guessed letters.
     """
     #Display the snowman stage for the current number of mistakes.
-    print(STAGES[mistakes])
+    print("\n" + STAGES[mistakes])
 
     # Build a display version of the secret word.
     display_word = ""
@@ -26,7 +26,7 @@ def display_game_state(mistakes, secret_word, guessed_letters):
         else:
             display_word += "_ "
     print("Word: ", display_word)
-    print("\n")
+    print(f"Guessed letters: {', '.join(guessed_letters)}\n")
 
 
 def play_game():
