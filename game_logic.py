@@ -33,14 +33,17 @@ def play_game():
     """Runs the main game loop."""
     secret_word = get_random_word()
     print("Welcome to Snowman Meltdown!")
-    print("Secret word selected: " + secret_word)  # For testing, later remove this line
 
     mistakes = 0
     guessed_letters = []
 
     while mistakes < len(STAGES) - 1:
         display_game_state(mistakes, secret_word, guessed_letters)
-        guess = input("Guess a letter: ").lower()
+        guess = input("Guess a letter: ").lower().strip()
+
+        if len(guess) != 1 or not guess.isalpha():
+            print("Please enter a single alphabetical character.")
+            continue
 
         if guess in guessed_letters:
             print("You already guessed that letter.")
