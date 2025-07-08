@@ -19,4 +19,4 @@ A minimalistic hangman like game. In the terminal.
 ### Melting Snowman
 Create a hangman like game called melting snowman.
 
-Use the states defined in `bin/ascii_art.py`
+Use the states defined in `ascii_art.py`
